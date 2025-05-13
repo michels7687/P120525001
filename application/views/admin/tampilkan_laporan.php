@@ -62,7 +62,7 @@
 						</td>
 
 						<td>
-							<?php if ($tr->status_pembayaran == "1") {
+							<?php if ($tr->status_pembayaran == "2") {
 								echo "Kembali";
 							} else {
 								echo "Belum Kembali";
@@ -71,7 +71,7 @@
 
 
 						<td>
-							<?php if ($tr->status_pembayaran == "1") {
+							<?php if ($tr->status_pembayaran == "2") {
 								echo "Selesai";
 							} else {
 								echo "Belum Selesai";

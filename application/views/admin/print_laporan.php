@@ -33,7 +33,7 @@
   foreach($laporan as $tr): ?>
   <tr>
     <td><?= $no++; ?></td>
-    <td><?= $tr->nama; ?></td>
+    <td><?= $tr->status_pembayaran; ?></td>
     <td><?= $tr->merek; ?></td>
     <td><?= date('d/m/Y', strtotime($tr->tgl_rental)); ?></td>
     <td><?= date('d/m/Y', strtotime($tr->tgl_kembali)); ?></td>
@@ -49,7 +49,7 @@
     </td>
 
     <td>
-      <?php if($tr->status_pembayaran == "1"){
+      <?php if($tr->status_pembayaran == "2"){
         echo "Kembali";
       }else{
         echo "Belum Kembali";
@@ -58,7 +58,7 @@
 
 
     <td>
-      <?php if($tr->status_pembayaran == "1"){
+      <?php if($tr->status_pembayaran == "2"){
         echo "Selesai";
       }else{
         echo "Belum Selesai";

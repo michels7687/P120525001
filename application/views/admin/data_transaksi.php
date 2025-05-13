@@ -16,12 +16,12 @@
 					<th>Denda/Hari</th>
 					<th>Total Denda</th>
 					<th>Tgl. Dikembalikan</th>
-					<th>Ganti Rugi</th>
 					<th>Status Pengembalian</th>
+					<th>Status Rental</th>
 					<th>DP Pembayaran</th>
 					<th>Keterangan</th>
 					<th>Pembayaran</th>
-					<th>Pengembalian</th>
+					<th>Aksi</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -94,8 +94,8 @@
 								<?php if ($tr->status_pembayaran == "0") : ?>
 									<a onclick="return confirm('Yakin batal?')" class="btn btn-sm btn-danger" href="<?= base_url('admin/transaksi/batal_transaksi/' . $tr->id_rental) ?>"><i class="fas fa-times"></i></a>
 								<?php elseif ($tr->status_pembayaran == "1") : ?>
-									<a class="btn btn-sm btn-success mr-2" href="<?= base_url('admin/transaksi/transaksi_selesai/' . $tr->id_rental) ?>"><i class="fas fa-check"></i></a>
-									<a onclick="return confirm('Yakin batal?')" class="btn btn-sm btn-danger" href="<?= base_url('admin/transaksi/batal_transaksi/' . $tr->id_rental) ?>"><i class="fas fa-times"></i></a>
+									<a class="btn btn-sm btn-success mb-2 w-100" href="<?= base_url('admin/transaksi/transaksi_selesai/' . $tr->id_rental) ?>"><i class="fas fa-check"></i></a>
+									<a onclick="return confirm('Yakin batal?')" class="btn btn-sm btn-danger w-100" href="<?= base_url('admin/transaksi/batal_transaksi/' . $tr->id_rental) ?>"><i class="fas fa-times"></i></a>
 								<?php elseif ($tr->status_pembayaran == "2") : ?>
 									-
 								<?php endif; ?>
